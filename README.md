@@ -2,102 +2,100 @@
 
 אפליקציית רשת חברתית ייעודית המיועדת לרבנים לשיתוף ידע, דיונים תורניים ולימוד משותף.
 
-## תכונות עיקריות
+## 🌟 גרסה נוכחית - יציב ומלאה
 
-### 🎓 פרופיל רבני
-- הרשמה כרב עם פרטים מקצועיים
-- התמחויות ותחומי עיסוק
-- ישיבה או מוסד
-- עוקבים ומעקב אחר רבנים אחרים
+**✅ כל התכונות המרכזיות מיושמות ופועלות!**
 
-### 📝 פוסטים ודיונים
-- יצירת פוסטים בקטגוריות תורניות (תורה, הלכה, חסידות, מוסר)
-- תגובות ולייקים
-- שיתוף תכנים ומחשבות
+## 📦 Installation & Quick Start
 
-### 📚 שיעורים ולימוד
-- קביעת שיעורים וירטואליים
-- הרשמה לשיעורים
-- ניהול משתתפים
-
-### 📱 עיצוב רספונסיבי
-- תמיכה מלאה במובייל
-- ממשק ידידותי ונוח
-- ניווט קל ואינטואיטיבי
-
-## טכנולוגיות
-
-### Frontend
-- React 19 עם TypeScript
-- Tailwind CSS לעיצוב
-- Lucide React לאייקונים
-- עיצוב רספונסיבי מלא
-
-### Backend
-- Node.js עם Express
-- JWT לאימות
-- bcryptjs להצפנת סיסמאות
-- CORS לתקשורת בין דומיינים
-
-## התקנה והרצה
-
-### דרישות מקדימות
-- Node.js גרסה 16 ומעלה
-- npm או yarn
-
-### התקנה
-1. שכפל את המאגר:
+### 🚀 One-Command Setup
 ```bash
-git clone <repository-url>
+git clone https://github.com/aviz85/rabbi-social-network.git
 cd rabbi-social-network
-```
-
-2. התקן את התלות:
-```bash
 npm install
-```
-
-### הרצה בפיתוח
-```bash
 npm run dev
 ```
-פקודה זו תפעיל גם את שרת הפיתוח (port 3001) וגם את אפליקציית React (port 3000).
 
-### הרצת שרת בלבד
-```bash
-npm run server
-```
+### 🔗 Live Repository
+**GitHub**: https://github.com/aviz85/rabbi-social-network
 
-### בנייה לייצור
-```bash
-npm run build
-```
+### 👤 Test Account
+- **Email**: test@rabbi.com
+- **Password**: password123
 
-## מבנה הפרויקט
+## ✅ תכונות מיושמות
+
+### 🔐 מערכת אימות מלאה
+- ✅ JWT Authentication עם אחסון מאובטח
+- ✅ הרשמה והתחברות עם אימות סיסמה
+- ✅ Logout עם ניקוי טוקנים אוטומטי
+- ✅ Auto-login לצורך פיתוח
+
+### 📝 פוסטים ואינטראקציות
+- ✅ יצירת פוסטים חדשים בקטגוריות תורניות
+- ✅ Like/Unlike עם עדכונים בזמן אמת
+- ✅ תגובות עם סנכרון מלא
+- ✅ ספירת לייקים דינמית
+
+### 👥 מערכת עוקבים (Follow)
+- ✅ Follow/Unfollow משתמשים
+- ✅ עדכוני ספירת עוקבים בזמן אמת
+- ✅ כפתורי follow בכרטיסי פרופיל
+- ✅ עוקבים בסרגל צד (רבנים מומלצים)
+- ✅ דפי פרופיל מלאים עם סטטיסטיקות
+
+### 📚 רישום לשיעורים
+- ✅ צפייה בשיעורים קרובים
+- ✅ Register/Unregister לשיעורים
+- ✅ ניהול תפוסה ומקומות פנויים
+- ✅ עדכוני משתתפים בזמן אמת
+
+### 📱 ממשק משתמש
+- ✅ עיצוב רספונסיבי מלא (דסקטופ + מובייל)
+- ✅ Tailwind CSS מודרני
+- ✅ תמיכה מלאה בעברית (RTL)
+- ✡️ מצבי טעינה וטיפול שגיאות
+- ✡️ ניווט אינטואיטיבי עם סרגל צד
+
+## 🛠️ טכנולוגיות
+
+### Frontend
+- **React 18** + TypeScript
+- **Tailwind CSS** לעיצוב מודרני
+- **Lucide React** לאייקונים
+- **JWT** לאימות לקוח
+- **LocalStorage** לאחסון טוקנים
+
+### Backend
+- **Node.js** + Express
+- **SQLite** למסד נתונים
+- **JWT** לאימות שרת
+- **bcryptjs** להצפנת סיסמאות
+- **CORS** לתקשורת בין דומיינים
+
+## 📁 מבנה הפרויקט
 
 ```
 rabbi-social-network/
 ├── src/
 │   ├── components/          # רכיבי React
-│   │   ├── Header.tsx       # כותרת דסקטופ
-│   │   ├── MobileHeader.tsx # כותרת מובייל
-│   │   ├── Sidebar.tsx      # סרגל צד דסקטופ
-│   │   ├── MobileSidebar.tsx # סרגל צד מובייל
-│   │   ├── PostCard.tsx     # כרטיס פוסט
-│   │   ├── CreatePost.tsx   # יצירת פוסט חדש
-│   │   ├── ProfileCard.tsx  # כרטיס פרופיל
-│   │   ├── StudySessionCard.tsx # כרטיס שיעור
-│   │   ├── CommentSection.tsx # מקטע תגובות
-│   │   └── AuthModal.tsx    # מודל אימות
-│   ├── types/               # טיפוסי TypeScript
-│   ├── data/                # נתוני דמה
-│   └── services/            # שירותי API
-├── server.js                # שרת Express
-├── package.json            # הגדרות פרויקט
-└── README.md               # תיעוד
+│   │   ├── AuthModal.tsx    # מודל אימות
+│   │   ├── PostCard.tsx     # כרטיס פוסט עם לייקים
+│   │   ├── ProfileCard.tsx  # כרטיס פרופיל עם follow
+│   │   ├── Sidebar.tsx      # סרגל צד עם רבנים מומלצים
+│   │   ├── UserProfile.tsx  # דף פרופיל מלא
+│   │   ├── StudySessionCard.tsx # כרטיס שיעור עם רישום
+│   │   └── ...
+│   ├── services/           # שירותי API
+│   │   └── api.ts          # API service מלא
+│   ├── types/              # טיפוסי TypeScript
+│   └── data/               # נתוני הדגמה
+├── server.js               # שרת Express מלא
+├── rabbis.db              # מסד נתונים SQLite
+└── package.json           # כל התלות וסקריפטים
 ```
 
-## API Endpoints
+## 🚀 API Endpoints
 
 ### אימות
 - `POST /api/auth/register` - הרשמה
@@ -106,34 +104,73 @@ rabbi-social-network/
 ### פוסטים
 - `GET /api/posts` - קבלת כל הפוסטים
 - `POST /api/posts` - יצירת פוסט חדש
-- `POST /api/posts/:id/like` - לייק לפוסט
-- `POST /api/posts/:id/comments` - הוספת תגובה
+- `POST /api/posts/:id/like` - Like/Unlike פוסט
 
-### משתמשים
+### משתמשים ועוקבים
 - `GET /api/users` - קבלת כל המשתמשים
-- `GET /api/users/:id` - קבלת משתמש ספציפי
+- `POST /api/users/:id/follow` - Follow/Unfollow משתמש
+- `GET /api/users/:id/follow-status` - סטטוס follow
+- `GET /api/users/:id/posts` - פוסטים של משתמש
 
 ### שיעורים
-- `GET /api/study-sessions` - קבלת כל השיעורים
+- `GET /api/study-sessions` - קבלת שיעורים
+- `POST /api/study-sessions/:id/register` - רישום לשיעור
+- `GET /api/study-sessions/:id/registration-status` - סטטוס רישום
 
-## תכונות עתידיות
+## 🎯 תכונות מיוחדות
 
-- [ ] העלאת תמונות ומסמכים
-- [ ] הודעות פרטיות בין רבנים
-- [ ] מערכת המלצות חכמה
-- [ ] חיפוש מתקדם עם סינון
-- [ ] קבוצות לימוד ייעודיות
-- [ ] אינטגרציה עם לוח שנה
-- [ ] תמיכה בשפות נוספות
+### 🔄 עדכונים בזמן אמת
+- Optimistic UI עם API fallback
+- סנכרון אוטומטי בין רכיבים
+- ספירות דינמיות (עוקבים, לייקים, משתתפים)
 
-## תרומה
+### 🛡️ טיפול שגיאות
+- Error boundaries
+- Loading states מתקדמים
+- הודעות שגיאה ידידותיות
 
-הפרויקט פתוח לתרומות. אנא שלח בקשות משיכה (Pull Requests) עם שיפורים ותיקונים.
+### 📱 חוויית מובייל
+- Responsive design מלא
+- Mobile sidebar אינטראקטיבי
+- Touch-friendly controls
 
-## רישיון
+## 🔧 הרצה
 
-הפרויקט מופץ תחת רישיון MIT.
+### פיתוח
+```bash
+npm run dev
+```
+מפעיל גם frontend (port 3001) וגם backend (port 5001)
+
+### ייצור
+```bash
+npm run build
+npm start
+```
+
+## 🌟 הישגים
+
+- ✅ **מערכת אימות מלאה** - JWT עם אבטחה
+- ✅ **פוסטים אינטראקטיביים** - Like/Unlike בזמן אמת
+- ✅ **מערכת עוקבים** - Follow/Unfollow עם סטטיסטיקות
+- ✅ **רישום שיעורים** - ניהול תפוסה ומשתתפים
+- ✅ **TypeScript מלא** - Type safety בכל הרכיבים
+- ✅ **Responsive Design** - עובד מושלם במובייל
+
+## 🤝 תרומה
+
+1. Fork את המאגר
+2. צור branch לתכונה חדשה
+3. שלח Pull Request
+
+## 📞 יצירת קשר
+
+- **Author**: Aviz Maeir
+- **Email**: avizmaeir@gmail.com
+- **GitHub**: [@aviz85](https://github.com/aviz85)
 
 ---
 
-**רבנים נט** - חיבור עולם התורה בעידן הדיגיטלי
+**רבנים נט** - חיבור עולם התורה בעידן הדיגיטלי ✡️
+
+🔗 **GitHub**: https://github.com/aviz85/rabbi-social-network
