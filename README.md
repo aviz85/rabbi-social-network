@@ -1,46 +1,139 @@
-# Getting Started with Create React App
+# רבנים נט - רשת חברתית לרבנים
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+אפליקציית רשת חברתית ייעודית המיועדת לרבנים לשיתוף ידע, דיונים תורניים ולימוד משותף.
 
-## Available Scripts
+## תכונות עיקריות
 
-In the project directory, you can run:
+### 🎓 פרופיל רבני
+- הרשמה כרב עם פרטים מקצועיים
+- התמחויות ותחומי עיסוק
+- ישיבה או מוסד
+- עוקבים ומעקב אחר רבנים אחרים
 
-### `npm start`
+### 📝 פוסטים ודיונים
+- יצירת פוסטים בקטגוריות תורניות (תורה, הלכה, חסידות, מוסר)
+- תגובות ולייקים
+- שיתוף תכנים ומחשבות
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 📚 שיעורים ולימוד
+- קביעת שיעורים וירטואליים
+- הרשמה לשיעורים
+- ניהול משתתפים
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 📱 עיצוב רספונסיבי
+- תמיכה מלאה במובייל
+- ממשק ידידותי ונוח
+- ניווט קל ואינטואיטיבי
 
-### `npm test`
+## טכנולוגיות
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- React 19 עם TypeScript
+- Tailwind CSS לעיצוב
+- Lucide React לאייקונים
+- עיצוב רספונסיבי מלא
 
-### `npm run build`
+### Backend
+- Node.js עם Express
+- JWT לאימות
+- bcryptjs להצפנת סיסמאות
+- CORS לתקשורת בין דומיינים
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## התקנה והרצה
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### דרישות מקדימות
+- Node.js גרסה 16 ומעלה
+- npm או yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### התקנה
+1. שכפל את המאגר:
+```bash
+git clone <repository-url>
+cd rabbi-social-network
+```
 
-### `npm run eject`
+2. התקן את התלות:
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### הרצה בפיתוח
+```bash
+npm run dev
+```
+פקודה זו תפעיל גם את שרת הפיתוח (port 3001) וגם את אפליקציית React (port 3000).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### הרצת שרת בלבד
+```bash
+npm run server
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### בנייה לייצור
+```bash
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## מבנה הפרויקט
 
-## Learn More
+```
+rabbi-social-network/
+├── src/
+│   ├── components/          # רכיבי React
+│   │   ├── Header.tsx       # כותרת דסקטופ
+│   │   ├── MobileHeader.tsx # כותרת מובייל
+│   │   ├── Sidebar.tsx      # סרגל צד דסקטופ
+│   │   ├── MobileSidebar.tsx # סרגל צד מובייל
+│   │   ├── PostCard.tsx     # כרטיס פוסט
+│   │   ├── CreatePost.tsx   # יצירת פוסט חדש
+│   │   ├── ProfileCard.tsx  # כרטיס פרופיל
+│   │   ├── StudySessionCard.tsx # כרטיס שיעור
+│   │   ├── CommentSection.tsx # מקטע תגובות
+│   │   └── AuthModal.tsx    # מודל אימות
+│   ├── types/               # טיפוסי TypeScript
+│   ├── data/                # נתוני דמה
+│   └── services/            # שירותי API
+├── server.js                # שרת Express
+├── package.json            # הגדרות פרויקט
+└── README.md               # תיעוד
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## API Endpoints
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### אימות
+- `POST /api/auth/register` - הרשמה
+- `POST /api/auth/login` - התחברות
+
+### פוסטים
+- `GET /api/posts` - קבלת כל הפוסטים
+- `POST /api/posts` - יצירת פוסט חדש
+- `POST /api/posts/:id/like` - לייק לפוסט
+- `POST /api/posts/:id/comments` - הוספת תגובה
+
+### משתמשים
+- `GET /api/users` - קבלת כל המשתמשים
+- `GET /api/users/:id` - קבלת משתמש ספציפי
+
+### שיעורים
+- `GET /api/study-sessions` - קבלת כל השיעורים
+
+## תכונות עתידיות
+
+- [ ] העלאת תמונות ומסמכים
+- [ ] הודעות פרטיות בין רבנים
+- [ ] מערכת המלצות חכמה
+- [ ] חיפוש מתקדם עם סינון
+- [ ] קבוצות לימוד ייעודיות
+- [ ] אינטגרציה עם לוח שנה
+- [ ] תמיכה בשפות נוספות
+
+## תרומה
+
+הפרויקט פתוח לתרומות. אנא שלח בקשות משיכה (Pull Requests) עם שיפורים ותיקונים.
+
+## רישיון
+
+הפרויקט מופץ תחת רישיון MIT.
+
+---
+
+**רבנים נט** - חיבור עולם התורה בעידן הדיגיטלי
